@@ -92,7 +92,7 @@ public class ProviderResource {
 	@Path("{providerId}/clients/{clientId}")
 	public Client updateclient(@PathParam("providerId") Long providerId,
 			@PathParam("clientId") Long clientId, Client client) {
-		client = clientDAO.update(providerId, client);
+		client = clientDAO.update(client);
 		return client;
 	}
 	
