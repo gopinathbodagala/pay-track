@@ -13,10 +13,11 @@ public interface SqlConstants {
 
 	String UPDATE_CLIENT = "update clients set first_name = ?, last_name=?, email_id=?, mobile=?, address=? where id = ?";
 	String INSERT_CLIENT = "INSERT INTO clients (first_name, last_name, "
-			+ " email_id, mobile_number, address) "
-			+ " VALUES (?,?,?,?,?)";
-	
+			+ " email_id, mobile_number, address) " + " VALUES (?,?,?,?,?)";
+
 	String INSERT_PROVIDER_CLIENTS = "INSERT INTO provider_clients (provider_id, client_id "
-			+ " ) "
-			+ " VALUES (?,?)";
+			+ " ) " + " VALUES (?,?)";
+
+	String INSERT_RECIEPT = "INSERT INTO reciepts (provider_clients_id,from,to,amount,payment_date) values(?,?,?,?,?)";
+	String SELECT_PROVIDER_CLIENTS = "SELECT * FROM provider_clients WHERE provider_id= ? AND client_id= ?";
 }
