@@ -50,19 +50,10 @@ public class ReceiptDAO extends BaseDAO {
 	}
 
 	private ProviderClientDO getProviderClients(Long providerId, Long clientId) {
-
-		List<ProviderClientDO> providerClientDOs = jdbcTemplate.query(SqlConstants.SELECT_PROVIDER_CLIENTS,
+		ProviderClientDO providerClientDO = jdbcTemplate.queryForObject(SqlConstants.SELECT_PROVIDER_CLIENTS,
 				new BeanPropertyRowMapper<ProviderClientDO>(ProviderClientDO.class),
 				providerId, clientId);
-		ProviderClientDO providerClientDO = new ProviderClientDO(); 
-		if(providerClientDOs != null && providerClientDOs.size() > 0){
-			ProviderClientDO dbProviderClientDO = providerClientDOs.get(0);
-			providerClientDO.setId(dbProviderClientDO.getId());
-			providerClientDO.setClientId(dbProviderClientDO.getClientId());
-			providerClientDO.setProviderId(dbProviderClientDO.getProviderId());
-		}
 		return providerClientDO;
-
 	}
 
 	public Providers selectByEmail(String email) {

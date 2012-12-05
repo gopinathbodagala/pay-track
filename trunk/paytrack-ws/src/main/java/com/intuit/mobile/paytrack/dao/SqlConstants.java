@@ -20,4 +20,7 @@ public interface SqlConstants {
 
 	String INSERT_RECIEPT = "INSERT INTO reciepts (provider_clients_id,from,to,amount,payment_date) values(?,?,?,?,?)";
 	String SELECT_PROVIDER_CLIENTS = "SELECT * FROM provider_clients WHERE provider_id= ? AND client_id= ?";
+
+	String SELECT_ALL_CLIENTS_FOR_PROVIDER = "select c.* from clients c join provider_clients cp on c.id = cp.client_id where cp.provider_id = ?";
+
 }
