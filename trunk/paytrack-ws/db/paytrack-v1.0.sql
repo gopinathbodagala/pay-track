@@ -29,7 +29,7 @@ CREATE TABLE `clients` (
   `first_name` varchar(100) DEFAULT NULL,
   `last_name` varchar(100) DEFAULT NULL,
   `email_id` varchar(50) NOT NULL,
-  `mobile_number` bigint(20) DEFAULT NULL,
+  `mobile_number` varchar(20) DEFAULT NULL,
   `address` varchar(300) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -56,7 +56,7 @@ CREATE TABLE `providers` (
   `first_name` varchar(100) DEFAULT NULL,
   `last_name` varchar(100) DEFAULT NULL,
   `email_id` varchar(50) NOT NULL,
-  `mobile_number` bigint(20) DEFAULT NULL,
+  `mobile_number` varchar(20) DEFAULT NULL,
   `address` varchar(300) DEFAULT NULL,
   `service_name` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`)
