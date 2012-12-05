@@ -82,7 +82,7 @@ public class MailService {
 				+ "<tr><td align='right'><b>Issued By</b></td></tr>"
 				+ "<tr><td align='right'><b>"
 				+ provider.getFirstName()
-				+ ""
+				+ " "
 				+ provider.getLastName()
 				+ "</b></td></tr>"
 				+ "</table>"
