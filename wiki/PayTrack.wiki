@@ -1,13 +1,3 @@
-PayTrack – payment and receipt tracking software for professionals who provide services such as teaching art, sports, writing, drama.
+PayTrack – Easy Payment and Receipt tracking software 
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Our customers are professionals who provide services such as math, art, music, sports, writing, drama at various locations. Our Customers are small to mid professional service providers who may be affiliated to a school or institution and have 10-100 clients.
