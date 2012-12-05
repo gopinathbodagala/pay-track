@@ -1,6 +1,5 @@
 package com.intuit.mobile.paytrack.dao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
