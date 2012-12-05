@@ -88,7 +88,7 @@ public class MailService {
 				+ "</table>"
 				+ "</html>";
 		
-		sendHTMLMail(client.getEmail(), provider.getEmail(), template);
+		sendHTMLMail(client.getEmail(), "Receipt for " + provider.getServiceName(), template);
 	}
 
 	public static void main(String[] args) {
