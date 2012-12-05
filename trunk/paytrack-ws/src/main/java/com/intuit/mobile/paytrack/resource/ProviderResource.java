@@ -18,9 +18,14 @@ import javax.ws.rs.QueryParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.intuit.mobile.paytrack.dao.ClientDAO;
 import com.intuit.mobile.paytrack.dao.ProviderDAO;
+import com.intuit.mobile.paytrack.dao.ReceiptDAO;
+import com.intuit.mobile.paytrack.jaxb.Client;
+import com.intuit.mobile.paytrack.jaxb.Clients;
 import com.intuit.mobile.paytrack.jaxb.Provider;
 import com.intuit.mobile.paytrack.jaxb.Providers;
+import com.intuit.mobile.paytrack.jaxb.Receipt;
 
 /**
  * @author Vijayan Srinivasan
@@ -34,7 +39,11 @@ public class ProviderResource {
 	@Autowired
 	private ProviderDAO providerDAO;
 
+	@Autowired
+	private ClientDAO clientDAO;
 	
+	@Autowired
+	private ReceiptDAO receiptDAO;
 
 	@GET
 	public Providers getAll(@QueryParam("email") String email,
@@ -43,9 +52,9 @@ public class ProviderResource {
 		if (email == null && mobile == null) {
 			projects = providerDAO.selectAll();
 
-		} else if(email!=null){
+		} else if (email != null) {
 			projects = providerDAO.selectByEmail(email);
-		}else{
+		} else {
 			projects = providerDAO.selectByMobile(mobile);
 		}
 		return projects;
@@ -59,10 +68,40 @@ public class ProviderResource {
 
 	@PUT
 	@Path("{id}")
-	public Provider put(@PathParam("id") Long id,
-			Provider provider) {
+	public Provider put(@PathParam("id") Long id, Provider provider) {
 		provider = providerDAO.update(provider);
 		return provider;
 	}
 
+	@GET
+	@Path("{providerId}/clients")
+	public Clients getAllClients(@PathParam("id") Long providerId) {
+		Clients clients = clientDAO.selectAll(providerId);
+		return clients;
+	}
+
+	@POST
+	@Path("{providerId}/clients")
+	public Client addClient(@PathParam("providerId") Long providerId,
+			Client client) {
+		client = clientDAO.save(providerId, client);
+		return client;
+	}
+
+	@PUT
+	@Path("{providerId}/clients/{clientId}")
+	public Client updateclient(@PathParam("providerId") Long providerId,
+			@PathParam("clientId") Long clientId, Client client) {
+		client = clientDAO.update(providerId, client);
+		return client;
+	}
+	
+	@POST
+	@Path("{providerId}/clients/{clientId}")
+	public Receipt addReceipt(@PathParam("providerId") Long providerId,
+			@PathParam("clientId") Long clientId,
+			Receipt receipt) {
+		receipt = receiptDAO.save(providerId, clientId, receipt);
+		return receipt;
+	}
 }
