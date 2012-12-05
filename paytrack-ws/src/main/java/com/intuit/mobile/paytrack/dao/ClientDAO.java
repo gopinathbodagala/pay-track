@@ -39,11 +39,8 @@ public class ClientDAO extends BaseDAO {
 			@Override
 			public PreparedStatement createPreparedStatement(Connection con)
 					throws SQLException {
-				String sql = "INSERT INTO clients (first_name, last_name, "
-						+ " email_id, mobile_number, address) "
-						+ " VALUES (?,?,?,?,?)";
-				PreparedStatement ps = con.prepareStatement(sql,
-						new String[] { "id" });
+				PreparedStatement ps = con.prepareStatement(
+						SqlConstants.INSERT_CLIENT, new String[] { "id" });
 				ps.setString(1, client.getFirstName());
 				ps.setString(2, client.getLastName());
 				ps.setString(3, client.getEmail());
@@ -60,10 +57,10 @@ public class ClientDAO extends BaseDAO {
 	}
 
 	public Client update(Client client) {
-		String sql = "update clients set first_name = ?, last_name=?, email_id=?, mobile=?, address=? where id = ?";
-		jdbcTemplate.update(sql, client.getFirstName(), client.getLastName(),
-				client.getEmail(), client.getMobile(), client.getAddress(),
-				client.getId());
+
+		jdbcTemplate.update(SqlConstants.UPDATE_CLIENT, client.getFirstName(),
+				client.getLastName(), client.getEmail(), client.getMobile(),
+				client.getAddress(), client.getId());
 		return client;
 	}
 
