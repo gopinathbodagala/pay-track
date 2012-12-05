@@ -26,6 +26,7 @@ import com.intuit.mobile.paytrack.jaxb.Clients;
 import com.intuit.mobile.paytrack.jaxb.Provider;
 import com.intuit.mobile.paytrack.jaxb.Providers;
 import com.intuit.mobile.paytrack.jaxb.Receipt;
+import com.intuit.mobile.paytrack.jaxb.Receipts;
 
 /**
  * @author Vijayan Srinivasan
@@ -72,12 +73,27 @@ public class ProviderResource {
 		provider = providerDAO.update(provider);
 		return provider;
 	}
+	
+	@GET
+	@Path("{id}")
+	public Provider put(@PathParam("id") Long id) {
+		Provider provider = providerDAO.selectById(id);
+		return provider;
+	}
 
 	@GET
 	@Path("{providerId}/clients")
 	public Clients getAllClients(@PathParam("providerId") Long providerId) {
 		Clients clients = clientDAO.selectAll(providerId);
 		return clients;
+	}
+	
+	@GET
+	@Path("{providerId}/clients/{clientId}")
+	public Client getClient(@PathParam("providerId") Long providerId,
+			@PathParam("clientId") Long clientId) {
+		Client client = clientDAO.selectClient(clientId);
+		return client;
 	}
 
 	@POST
@@ -90,10 +106,18 @@ public class ProviderResource {
 
 	@PUT
 	@Path("{providerId}/clients/{clientId}")
-	public Client updateclient(@PathParam("providerId") Long providerId,
+	public Client updateClient(@PathParam("providerId") Long providerId,
 			@PathParam("clientId") Long clientId, Client client) {
 		client = clientDAO.update(client);
 		return client;
+	}
+	
+	@GET
+	@Path("{providerId}/clients/{clientId}/receipts")
+	public Receipts selectReceipts(@PathParam("providerId") Long providerId,
+			@PathParam("clientId") Long clientId) {
+		Receipts receipts = receiptDAO.selectAllReceipts(providerId, clientId);
+		return receipts;
 	}
 	
 	@POST

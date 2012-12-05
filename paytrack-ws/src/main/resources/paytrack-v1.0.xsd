@@ -44,6 +44,7 @@
 	<element name="Clients" type="tns:ClientsType"></element>
 	<element name="Providers" type="tns:ProvidersType"></element>
 	<element name="Receipt" type="tns:ReceiptType"></element>
+	<element name="Receipts" type="tns:ReceiptsType"></element>
 
 	<complexType name="ClientsType">
 		<sequence>

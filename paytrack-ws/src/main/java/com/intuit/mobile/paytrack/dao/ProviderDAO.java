@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.PreparedStatementCreator;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
@@ -99,6 +100,18 @@ public class ProviderDAO extends BaseDAO {
 				provider.getAddress(), provider.getServiceName(),
 				provider.getId());
 		return provider;
+	}
+
+	public Provider selectById(Long id) {
+		try {
+			ProviderDO poviderDO = jdbcTemplate
+					.queryForObject(SqlConstants.SELECT_PROVIDER_BY_ID,
+							new BeanPropertyRowMapper<ProviderDO>(
+									ProviderDO.class), id);
+			return mapper.map(poviderDO, Provider.class);
+		} catch (EmptyResultDataAccessException e) {
+			return null;
+		}
 	}
 
 }

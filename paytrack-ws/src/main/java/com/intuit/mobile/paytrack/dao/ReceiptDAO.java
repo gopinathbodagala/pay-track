@@ -14,9 +14,11 @@ import org.springframework.stereotype.Repository;
 
 import com.intuit.mobile.paytrack.dbo.ProviderClientDO;
 import com.intuit.mobile.paytrack.dbo.ProviderDO;
+import com.intuit.mobile.paytrack.dbo.ReceiptDO;
 import com.intuit.mobile.paytrack.jaxb.Provider;
 import com.intuit.mobile.paytrack.jaxb.Providers;
 import com.intuit.mobile.paytrack.jaxb.Receipt;
+import com.intuit.mobile.paytrack.jaxb.Receipts;
 
 @Repository
 public class ReceiptDAO extends BaseDAO {
@@ -31,7 +33,7 @@ public class ReceiptDAO extends BaseDAO {
 			public PreparedStatement createPreparedStatement(Connection con)
 					throws SQLException {
 				PreparedStatement ps = con.prepareStatement(
-						SqlConstants.INSERT_RECIEPT, new String[] { "id" });
+						SqlConstants.INSERT_RECEIPT, new String[] { "id" });
 				ps.setLong(1, providerClientDO.getId());
 				ps.setTimestamp(2, new Timestamp(receipt.getFrom().getTime()));
 				ps.setTimestamp(3, new Timestamp(receipt.getTo().getTime()));
@@ -50,9 +52,10 @@ public class ReceiptDAO extends BaseDAO {
 	}
 
 	private ProviderClientDO getProviderClients(Long providerId, Long clientId) {
-		ProviderClientDO providerClientDO = jdbcTemplate.queryForObject(SqlConstants.SELECT_PROVIDER_CLIENTS,
-				new BeanPropertyRowMapper<ProviderClientDO>(ProviderClientDO.class),
-				providerId, clientId);
+		ProviderClientDO providerClientDO = jdbcTemplate.queryForObject(
+				SqlConstants.SELECT_PROVIDER_CLIENTS,
+				new BeanPropertyRowMapper<ProviderClientDO>(
+						ProviderClientDO.class), providerId, clientId);
 		return providerClientDO;
 	}
 
@@ -70,6 +73,24 @@ public class ReceiptDAO extends BaseDAO {
 			providerList.add(provider);
 		}
 		return providers;
+	}
+
+	public Receipts selectAllReceipts(Long providerId, Long clientId) {
+
+		List<ReceiptDO> receiptDOs = jdbcTemplate.query(
+				SqlConstants.SELECT_RECEIPTS,
+				new BeanPropertyRowMapper<ReceiptDO>(ReceiptDO.class),
+				providerId, clientId);
+
+		Receipts receipts = new Receipts();
+		List<Receipt> receiptList = receipts.getReceipts();
+
+		for (ReceiptDO receiptDO : receiptDOs) {
+			Receipt receipt = mapper.map(receiptDO, Receipt.class);
+			receiptList.add(receipt);
+		}
+
+		return receipts;
 	}
 
 }
