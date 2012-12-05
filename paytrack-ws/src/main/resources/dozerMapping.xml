@@ -2,17 +2,33 @@
 <mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://dozer.sourceforge.net http://dozer.sourceforge.net/schema/beanmapping.xsd">
 	<mapping wildcard="true">
-		<class-a>com.intuit.mobile.paytrack.dbo.ClientDAO</class-a>
+		<class-a>com.intuit.mobile.paytrack.dbo.ClientDO</class-a>
 		<class-b>com.intuit.mobile.paytrack.jaxb.Client</class-b>
+		<field>
+			<a>emailId</a>
+			<b>email</b>
+		</field>
+		<field>
+			<a>mobileNumber</a>
+			<b>mobile</b>
+		</field>
 	</mapping>
 
 	<mapping wildcard="true">
 		<class-a>com.intuit.mobile.paytrack.dbo.ProviderDO</class-a>
 		<class-b>com.intuit.mobile.paytrack.jaxb.Provider</class-b>
+		<field>
+			<a>emailId</a>
+			<b>email</b>
+		</field>
+		<field>
+			<a>mobileNumber</a>
+			<b>mobile</b>
+		</field>
 	</mapping>
 	
 	<mapping wildcard="true">
-		<class-a>com.intuit.mobile.paytrack.dbo.ReceiptDAO</class-a>
+		<class-a>com.intuit.mobile.paytrack.dbo.ReceiptDO</class-a>
 		<class-b>com.intuit.mobile.paytrack.jaxb.Receipt</class-b>
 	</mapping>
 	

@@ -6,6 +6,8 @@ package com.intuit.mobile.paytrack.resource;
 import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
 import static javax.ws.rs.core.MediaType.APPLICATION_XML;
 
+import java.util.Date;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -18,6 +20,7 @@ import javax.ws.rs.QueryParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.intuit.mobile.paytrack.MailService;
 import com.intuit.mobile.paytrack.dao.ClientDAO;
 import com.intuit.mobile.paytrack.dao.ProviderDAO;
 import com.intuit.mobile.paytrack.dao.ReceiptDAO;
@@ -42,9 +45,12 @@ public class ProviderResource {
 
 	@Autowired
 	private ClientDAO clientDAO;
-	
+
 	@Autowired
 	private ReceiptDAO receiptDAO;
+
+	@Autowired
+	private MailService mailService;
 
 	@GET
 	public Providers getAll(@QueryParam("email") String email,
@@ -73,7 +79,7 @@ public class ProviderResource {
 		provider = providerDAO.update(provider);
 		return provider;
 	}
-	
+
 	@GET
 	@Path("{id}")
 	public Provider put(@PathParam("id") Long id) {
@@ -87,7 +93,7 @@ public class ProviderResource {
 		Clients clients = clientDAO.selectAll(providerId);
 		return clients;
 	}
-	
+
 	@GET
 	@Path("{providerId}/clients/{clientId}")
 	public Client getClient(@PathParam("providerId") Long providerId,
@@ -111,7 +117,7 @@ public class ProviderResource {
 		client = clientDAO.update(client);
 		return client;
 	}
-	
+
 	@GET
 	@Path("{providerId}/clients/{clientId}/receipts")
 	public Receipts selectReceipts(@PathParam("providerId") Long providerId,
@@ -119,13 +125,18 @@ public class ProviderResource {
 		Receipts receipts = receiptDAO.selectAllReceipts(providerId, clientId);
 		return receipts;
 	}
-	
+
 	@POST
 	@Path("{providerId}/clients/{clientId}/receipts")
 	public Receipt addReceipt(@PathParam("providerId") Long providerId,
-			@PathParam("clientId") Long clientId,
-			Receipt receipt) {
+			@PathParam("clientId") Long clientId, Receipt receipt) {
+		if (receipt.getDate() == null) {
+			receipt.setDate(new Date()); // Setting Current Date
+		}
 		receipt = receiptDAO.save(providerId, clientId, receipt);
+		Provider provider = providerDAO.selectById(providerId);
+		Client client = clientDAO.selectClient(clientId);
+		mailService.sendEmail(provider, client, receipt);
 		return receipt;
 	}
 }
