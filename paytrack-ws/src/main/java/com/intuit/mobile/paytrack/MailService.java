@@ -72,7 +72,7 @@ public class MailService {
 				+ client.getLastName()
 				+ "</b> towards <b>"
 				+ provider.getServiceName()
-				+ "</b> for the dates starting from<b>"
+				+ "</b> for the period starting from <b>"
 				+ dateFormat.format(receipt.getFrom())
 				+ "</b> to <b>"
 				+ dateFormat.format(receipt.getTo())
