@@ -25,37 +25,30 @@
 
 		</div>
 		<div class="content">
-			
-<span class="description"><u>PayTrack is an easy Payment and Receipt tracking software.</u></span><br/>
+
+			<span class="description">PayTrack is an easy Payment and
+				Receipt tracking software.</span><br /> <span class="description">Our
+				Customers</span><br /> <span class="contentData">Our customers are
+				esteemed professional service providers who impart their service and
+				expertise at multiple locations. These are professionals who conduct
+				classes and training in areas such as Math, Science, Personal
+				training, Art, Music, Kung Fu etc.</span><br /> <span class="description">How
+				can PayTrack help you ?</span><br /> <img class="payimg"
+				src="images/Before1.jpg">
+			<div class="imagecontent">
+				<span class="contentData">Worry no more about having receipt
+					books</span><br /> <span class="contentData">No more notebooks to
+					carry with you everywhere you go</span><br /> <span class="contentData">No
+					more embarrassing conversations about pending payments</span><br /> <span
+					class="contentData">Don't worry about providing receipts, we
+					do this for you</span><br /> <span class="contentData">Build trust
+					with your clients with receipt exchange</span><br />
+
+			</div>
 
 
-<span class="description"><u>Our Customers</u></span><br/>
-
-<span class="contentData">Our customers are esteemed professional service providers who impart their service and expertise at multiple locations. These are professionals who conduct classes and training in areas such as Math, Science, Personal training, Art, Music, Kung Fu etc.</span><br/>
-
-
- 
-
-
-<span class="description"><u>How can PayTrack help you  ?</u></span><br/>
-
-<img class="payimg" src="images/Before1.jpg">
-<div class="imagecontent">
-<span class="contentData">Worry no more about having receipt books</span><br/>
-
-<span  class="contentData">No more notebooks to carry with you everywhere you go</span><br/>
-
-<span  class="contentData">No more embarrassing conversations about pending payments</span><br/>
-
-<span  class="contentData">Don't worry about providing receipts, we do this for you</span><br/>
-
-<span  class="contentData">Build trust with your clients with receipt exchange</span><br/>
-
-</div>
-
-
-<br/>
-<span class="description"><u>And you can focus time and energy on what they enjoy doing the most</u></span>
+			<br /> <span class="description">And you can focus time and
+				energy on what they enjoy doing the most</span>
 
 		</div>
 		<div class="footer">
