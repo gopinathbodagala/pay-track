@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema"
-	targetNamespace="http://mobile-prototype.intuitlabs.com/devicereg/api/apns"
-	xmlns:tns="http://mobile-prototype.intuitlabs.com/devicereg/api/apns"
+	targetNamespace="http://mobile-prototype.intuitlabs.com/paytrack"
+	xmlns:tns="http://mobile-prototype.intuitlabs.com/paytrack"
 	elementFormDefault="qualified">
 
 	<complexType name="ProviderType">
