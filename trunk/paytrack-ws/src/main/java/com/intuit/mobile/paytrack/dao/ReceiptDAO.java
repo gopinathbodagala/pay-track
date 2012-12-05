@@ -58,6 +58,8 @@ public class ReceiptDAO extends BaseDAO {
 		if(providerClientDOs != null && providerClientDOs.size() > 0){
 			ProviderClientDO dbProviderClientDO = providerClientDOs.get(0);
 			providerClientDO.setId(dbProviderClientDO.getId());
+			providerClientDO.setClientId(dbProviderClientDO.getClientId());
+			providerClientDO.setProviderId(dbProviderClientDO.getProviderId());
 		}
 		return providerClientDO;
 
