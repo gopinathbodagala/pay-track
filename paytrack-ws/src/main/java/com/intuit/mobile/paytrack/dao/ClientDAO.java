@@ -20,7 +20,7 @@ public class ClientDAO extends BaseDAO {
 
 	public Clients selectAll(Long providerId) {
 		List<ClientDO> clientDOs = jdbcTemplate
-				.query("select * from clients where provider_id = ?",
+				.query(SqlConstants.SELECT_ALL_CLIENTS_FOR_PROVIDER,
 						new BeanPropertyRowMapper<ClientDO>(ClientDO.class),
 						providerId);
 
@@ -45,7 +45,7 @@ public class ClientDAO extends BaseDAO {
 				ps.setString(2, client.getLastName());
 				ps.setString(3, client.getEmail());
 				ps.setString(4, client.getMobile());
-				ps.setString(4, client.getAddress());
+				ps.setString(5, client.getAddress());
 				return ps;
 			}
 

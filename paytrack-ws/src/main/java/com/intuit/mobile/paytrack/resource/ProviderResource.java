@@ -75,7 +75,7 @@ public class ProviderResource {
 
 	@GET
 	@Path("{providerId}/clients")
-	public Clients getAllClients(@PathParam("id") Long providerId) {
+	public Clients getAllClients(@PathParam("providerId") Long providerId) {
 		Clients clients = clientDAO.selectAll(providerId);
 		return clients;
 	}
@@ -97,7 +97,7 @@ public class ProviderResource {
 	}
 	
 	@POST
-	@Path("{providerId}/clients/{clientId}")
+	@Path("{providerId}/clients/{clientId}/receipts")
 	public Receipt addReceipt(@PathParam("providerId") Long providerId,
 			@PathParam("clientId") Long clientId,
 			Receipt receipt) {

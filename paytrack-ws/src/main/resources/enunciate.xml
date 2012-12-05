@@ -9,7 +9,7 @@
 			uri="http://mobile-prototype.intuitlabs.com/devicereg/api/apns" />
 	</namespaces>
 	<modules>
-		<docs title="Device Registration API" docsDir="docs" copyright="http://mobile-prototype.intuitlabs.com"
+		<docs title="PayTack REST API" docsDir="docs" copyright="http://mobile-prototype.intuitlabs.com"
 			disableRestMountpoint="true"/>
 		<basic-app disabled="true" />
 		<csharp disabled="true" />

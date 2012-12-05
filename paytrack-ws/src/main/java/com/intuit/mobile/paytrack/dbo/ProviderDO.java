@@ -1,7 +1,6 @@
 package com.intuit.mobile.paytrack.dbo;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 
 
 /**
@@ -21,7 +20,7 @@ public class ProviderDO implements Serializable {
 
 	private String lastName;
 
-	private BigInteger mobileNumber;
+	private String mobileNumber;
 
 	private String serviceName;
 
@@ -68,11 +67,11 @@ public class ProviderDO implements Serializable {
 		this.lastName = lastName;
 	}
 
-	public BigInteger getMobileNumber() {
+	public String getMobileNumber() {
 		return this.mobileNumber;
 	}
 
-	public void setMobileNumber(BigInteger mobileNumber) {
+	public void setMobileNumber(String mobileNumber) {
 		this.mobileNumber = mobileNumber;
 	}
 
