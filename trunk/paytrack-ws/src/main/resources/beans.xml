@@ -14,7 +14,7 @@
 	
 	
 	 <bean class="org.dozer.spring.DozerBeanMapperFactoryBean">
-        <property name="mappingFiles" value="classpath*:/dozer-mapping.xml"/>
+        <property name="mappingFiles" value="classpath*:/dozerMapping.xml"/>
 	 </bean>
 
 	<!-- Scan for Jersey Rest Annotations -->
@@ -68,6 +68,29 @@
 		<property name="validationQuery" value="SELECT 1" />
 		<property name="testOnBorrow" value="true" />
 
+	</bean>
+	
+	
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.gmail.com" />
+		<property name="port" value="25" />
+		<property name="username" value="buy4me.in@gmail.com" />
+		<property name="password" value="buy4me$123" />
+		<property name="javaMailProperties">
+			<props>
+				<!-- Use SMTP transport protocol -->
+				<prop key="mail.transport.protocol">smtp</prop>
+				<!-- Use SMTP-AUTH to authenticate to SMTP server -->
+				<prop key="mail.smtp.auth">true</prop>
+				<!-- Use TLS to encrypt communication with SMTP server -->
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.debug">true</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="mailService" class="com.intuit.mobile.paytrack.MailService">
+		<property name="mailSender" ref="mailSender"/>
 	</bean>
 
 </beans>
