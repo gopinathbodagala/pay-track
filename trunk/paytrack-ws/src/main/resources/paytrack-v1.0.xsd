@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://mobile-prototype.intuitlabs.com/devicereg/api/apns"
+	xmlns:tns="http://mobile-prototype.intuitlabs.com/devicereg/api/apns"
+	elementFormDefault="qualified">
+
+	<complexType name="ProviderType">
+		<sequence>
+			<element name="id" type="long"></element>
+			<element name="firstName" type="string"></element>
+			<element name="lastName" type="string"></element>
+			<element name="email" type="string"></element>
+			<element name="mobile" type="string"></element>
+			<element name="address" type="string"></element>
+			<element name="serviceName" type="string"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="ClientType">
+		<sequence>
+			<element name="id" type="long"></element>
+			<element name="firstName" type="string"></element>
+			<element name="lastName" type="string"></element>
+			<element name="email" type="string"></element>
+			<element name="mobile" type="string"></element>
+			<element name="address" type="string"></element>
+		</sequence>
+	</complexType>
+	
+	
+	<complexType name="ReceiptType">
+		<sequence>
+			<element name="id" type="long"></element>
+			<element name="from" type="dateTime"></element>
+			<element name="to" type="dateTime"></element>
+			<element name="amount" type="double"></element>
+			<element name="date" type="dateTime"></element>
+		</sequence>
+	</complexType>
+
+
+	<element name="Client" type="tns:ClientType"></element>
+	<element name="Provider" type="tns:ProviderType"></element>
+	<element name="Clients" type="tns:ClientsType"></element>
+	<element name="Providers" type="tns:ProvidersType"></element>
+	<element name="Receipt" type="tns:ReceiptType"></element>
+
+	<complexType name="ClientsType">
+		<sequence>
+			<element name="Client" type="tns:ClientType" 
+				maxOccurs="unbounded"
+				minOccurs="0"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="ProvidersType">
+		<sequence>
+			<element name="Provider" type="tns:ProviderType" 
+				maxOccurs="unbounded"
+				minOccurs="0"/>
+		</sequence>
+	</complexType>
+	
+	<complexType name="ReceiptsType">
+		<sequence>
+			<element name="Receipt" type="tns:ReceiptType" 
+				maxOccurs="unbounded"
+				minOccurs="0"/>
+		</sequence>
+	</complexType>
+</schema>
