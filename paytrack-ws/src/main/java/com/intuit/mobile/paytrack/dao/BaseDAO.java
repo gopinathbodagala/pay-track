@@ -2,6 +2,7 @@ package com.intuit.mobile.paytrack.dao;
 
 import java.sql.Timestamp;
 
+import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -13,6 +14,9 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
  * 
  */
 public class BaseDAO {
+	
+	@Autowired
+	protected Mapper mapper;
 	
 	@Autowired
 	protected JdbcTemplate jdbcTemplate;
