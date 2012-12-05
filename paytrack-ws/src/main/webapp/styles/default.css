@@ -67,9 +67,6 @@ span.comment {
 	font-size: 10pt;
 }
 
-li {
-	padding-bottom: 10px;
-}
 
 p {
 	margin-bottom: 0;
@@ -398,4 +395,15 @@ textarea {
 
 .techDiv>span {
 	font-weight: bold;
+}
+.contentData {
+    line-height: 25px;
+}
+.description {
+    color: #258AAF;
+    font-weight: bold;
+    line-height: 50px;
+}
+.imagecontent{
+	float:left;
 }
