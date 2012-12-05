@@ -1,8 +1,11 @@
 package com.intuit.mobile.paytrack.dao;
 
+import org.springframework.stereotype.Repository;
+
 import com.intuit.mobile.paytrack.jaxb.Provider;
 import com.intuit.mobile.paytrack.jaxb.Providers;
 
+@Repository
 public class ProviderDAO {
 
 	public Providers selectAll() {
