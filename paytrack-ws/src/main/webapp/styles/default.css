@@ -1,0 +1,401 @@
+a:link,a:visited {
+	color: #258AAF;
+	text-decoration: none;
+}
+
+body {
+	color: #222222;
+	font: 400 16px/19px Roboto, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	color: #365F91;
+}
+
+ol#steplist {
+	list-style-type: decimal;
+	margin-right: 10px;
+}
+
+ol.sub {
+	list-style-type: circle;
+}
+
+span.code {
+	font-size: 10.0pt;
+	line-height: 150%;
+	font-family: Consolas;
+	color: black;
+	background: lightgrey;
+}
+
+span.codecolor {
+	font-size: 10.0pt;
+	font-family: Consolas;
+	color: #7F0055;
+}
+
+span.codesnippet {
+	font-size: 10.0pt;
+	font-family: Consolas;
+	color: black;
+}
+
+span.blue {
+	font-size: 10.0pt;
+	font-family: Consolas;
+	color: #2A00FF;
+}
+
+span.comment {
+	font-size: 10.0pt;
+	font-family: Consolas;
+	color: #3F7F5F;
+}
+
+span.green {
+	font-size: 10.0pt;
+	font-family: Consolas;
+	color: #3F7F7F;
+}
+
+span.comment {
+	color: #3F5FBF;
+	font-family: Consolas;
+	font-size: 10pt;
+}
+
+li {
+	padding-bottom: 10px;
+}
+
+p {
+	margin-bottom: 0;
+	margin-left: 30px;
+	padding-bottom: 0;
+}
+
+.header {
+	background: url("../images/bg.jpg") repeat scroll 0 0 transparent;
+	border: 1px solid #EFEAEA;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 0 0 3px #9FA3A6;
+	color: black;
+	font-size: 32px;
+	height: 80px;
+	margin: 0 213px;
+	padding: 12px 0 0 39px;
+	width: 1060px;
+}
+
+.content {
+	background: url("../images/bg.jpg") repeat scroll 0 0 transparent;
+	border: 1px solid #9ECAED;
+	border-radius: 10px 10px 0 0;
+	box-shadow: 0 0 7px #9FA3A6;
+	margin: 10px 213px 0;
+	min-height: 560px;
+	outline: medium none;
+	padding: 20px 0 0 39px;
+	width: 1060px;
+}
+
+.note {
+	padding: 10px;
+}
+
+.title {
+	color: #365EBF;
+	margin: 25px 178px 10px;
+	padding-left: 20px;
+}
+
+.titlehipher {
+	color: white !important;
+}
+
+#intuitLogo {
+	display: inline;
+	float: left;
+	height: 64px;
+	margin: -10px;
+	width: 156px;
+}
+
+#footerintuitLogo {
+	display: inline;
+	float: right;
+	height: 21px;
+	margin-top: 10px;
+	width: 100px;
+}
+
+#headerintuitLogo {
+	display: inline;
+	float: left;
+	height: 21px;
+	margin-top: 10px;
+	width: 100px;
+}
+
+#header_logo,#footer_logo {
+	display: inline;
+	float: left;
+	height: 48px;
+	margin: 10px;
+	width: 135px;
+}
+
+.global-sprite {
+	background: url("../images/ctodev_logo1.png") no-repeat scroll 0 0
+		transparent;
+}
+
+.footer {
+	background-color: #365EBF;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	box-shadow: 0 0 7px #9FA3A6;
+	height: 68px;
+	margin: 0 213px;
+	padding: 20px 0 0 39px;
+	width: 1060px;
+}
+
+.projectfooter {
+	background-color: #365EBF;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	height: 75px;
+	margin-left: 213px;
+	width: 1174px;
+	box-shadow: 0 0 7px #9FA3A6;
+}
+
+.formcontent {
+	padding: 30px;
+}
+
+.headercontent {
+	margin-left: 60px;
+}
+
+input[type="text"],input[type="password"],input[type="email"],textarea {
+	border: 1px solid #C6C6C6;
+	border-radius: 5px 5px 5px 5px;
+	font: bold 14px Helvetica, Arial, sans-serif;
+	padding: 7px;
+	color: #5B4444;
+	box-shadow: 0 0 8px transparent, 0 2px 2px rgba(0, 0, 0, 0.1) inset;
+}
+
+select {
+	border: 1px solid #C1C1C1;
+	border-radius: 3px 3px 3px 3px;
+	color: #474747;
+	cursor: pointer;
+	font: inherit;
+	height: 33px;
+	outline: 0 none;
+	padding: 5px 6px 6px 23px;
+	text-shadow: 0 1px 0 #FFFFFF;
+	width: 188px;
+}
+
+.copyright {
+	color: white;
+	float: left;
+	font-size: 15px;
+	font-weight: bold;
+	padding: 14px 0 0 14px;
+}
+
+.footerlogo {
+	background: url("../images/intuit-logo-white.png") no-repeat scroll 0 0
+		transparent;
+}
+
+.headerimage {
+	float: left;
+	height: 62px;
+	margin-left: 21px;
+	border: 0 none;
+}
+
+.contentcreateproject {
+	background: url("../images/bg.jpg") repeat scroll 0 0 transparent;
+	border: 1px solid #9ECAED;
+	border-radius: 10px 10px 0 0;
+	box-shadow: 0 0 7px #9FA3A6;
+	min-height: 500px;
+	margin: 10px 213px 0;
+	outline: medium none;
+	padding: 20px 0 0 39px;
+	width: 1060px;
+}
+
+input.submit {
+	background-color: #609428;
+	border: medium none currentcolor;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 2px rgba(0, 0, 0, 0.4)
+		inset, 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+	color: white !important;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font: bold 13px/18px Helvetica, Arial, sans-serif;
+	height: 30px;
+	margin: 0 10px 0 -1px;
+	padding: 0 14px;
+	text-decoration: none !important;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+input.cancel {
+	background-color: #666666;
+	border: medium none currentcolor;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 2px rgba(0, 0, 0, 0.4)
+		inset, 0 2px 0 rgba(255, 255, 255, 0.15) inset;
+	color: white !important;
+	cursor: pointer;
+	display: block;
+	float: left;
+	font: bold 13px/18px Helvetica, Arial, sans-serif;
+	height: 30px;
+	margin: 0 10px 0 -1px;
+	padding: 0 14px;
+	text-decoration: none !important;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+	width: 112px;
+}
+
+.guide {
+	margin: 28px;
+}
+
+select.push {
+	background: none repeat scroll 0 0 #EEEEEE;
+	border: 1px solid #C1C1C1;
+	border-radius: 3px 3px 3px 3px;
+	color: #474747;
+	cursor: pointer;
+	font: inherit;
+	height: 33px;
+	outline: 0 none;
+	padding: 5px 6px 6px 23px;
+	text-shadow: 0 1px 0 #FFFFFF;
+	width: 600px;
+}
+
+table {
+	white-space: nowrap;
+}
+
+textarea {
+	border: 1px solid #C6C6C6;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 0 8px transparent, 0 2px 2px rgba(0, 0, 0, 0.1) inset;
+	color: #474747;
+	font: bold 14px Helvetica, Arial, sans-serif;
+	margin-bottom: 11px;
+	padding: 7px;
+	width: 600px;
+}
+
+.ctologo {
+	margin-bottom: 25px;
+}
+
+.tip {
+	color: #ABABAB !important;
+}
+
+.green {
+	color: green;
+}
+
+.red {
+	color: red;
+}
+
+.message {
+	margin-left: 220px;
+}
+
+.lable {
+	font-weight: bold;
+}
+
+.mask {
+	filter: alpha(opacity =   80);
+	background-color: #222222;
+	bottom: 0;
+	left: 0;
+	opacity: 0.8;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+.floater {
+	position: fixed;
+	z-index: 100000;
+}
+
+.floatercontent {
+	background-color: #F7F7F7;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 0 2px rgba(255, 255, 255, 0.6) inset;
+	height: auto;
+	left: 40%;
+	margin: 0 auto;
+	position: fixed;
+	top: 40%;
+}
+
+.floatercontent>span {
+	line-height: 38px;
+	padding: 8px;
+}
+
+.floatercontent>img {
+	border-radius: 10px 10px 10px 10px;
+	float: left;
+	padding: 4px;
+}
+
+.androidtech {
+	border: 1px solid #E1DFDB;
+}
+
+.androidtech:hover {
+	border: 2px solid #C6CCE6;
+}
+
+.iostech {
+	border: 1px solid #E1DFDB;
+}
+
+.iostech:hover {
+	border: 2px solid #C6CCE6;
+}
+
+.techDiv {
+	margin: 0 auto;
+	width: 50%;
+	padding-top: 100px;
+}
+
+.techImg {
+	margin-top: 20px;
+}
+
+.techDiv>span {
+	font-weight: bold;
+}

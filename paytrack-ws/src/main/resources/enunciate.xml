@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<enunciate label="wannabecool" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="http://enunciate.codehaus.org/schemas/enunciate-1.26.xsd">
+
+	<namespaces>
+		<namespace id="gcm"
+			uri="http://mobile-prototype.intuitlabs.com/devicereg/api/gcm" />
+		<namespace id="apns"
+			uri="http://mobile-prototype.intuitlabs.com/devicereg/api/apns" />
+	</namespaces>
+	<modules>
+		<docs title="Device Registration API" docsDir="docs" copyright="http://mobile-prototype.intuitlabs.com"
+			disableRestMountpoint="true"/>
+		<basic-app disabled="true" />
+		<csharp disabled="true" />
+		<jaxws-client disabled="true" />
+		<java-client disabled="true" />
+		<jaxws-ri disabled="true" />
+		<jaxws-support disabled="true" />
+		<jersey disabled="true" />
+		<c disabled="true" />
+		<obj-c disabled="true" />
+	</modules>
+</enunciate>
+
