@@ -9,7 +9,7 @@ import java.math.BigDecimal;
  * The persistent class for the reciepts database table.
  * 
  */
-public class RecieptDO implements Serializable {
+public class ReceiptDO implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private int id;
@@ -24,7 +24,7 @@ public class RecieptDO implements Serializable {
 
 	private Timestamp to;
 
-	public RecieptDO() {
+	public ReceiptDO() {
 	}
 
 	public int getId() {
