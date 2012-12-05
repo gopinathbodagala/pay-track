@@ -15,4 +15,8 @@ public interface SqlConstants {
 	String INSERT_CLIENT = "INSERT INTO clients (first_name, last_name, "
 			+ " email_id, mobile_number, address) "
 			+ " VALUES (?,?,?,?,?)";
+	
+	String INSERT_PROVIDER_CLIENTS = "INSERT INTO provider_clients (provider_id, client_id "
+			+ " ) "
+			+ " VALUES (?,?)";
 }

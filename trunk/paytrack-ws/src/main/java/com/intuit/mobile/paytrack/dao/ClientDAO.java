@@ -53,7 +53,13 @@ public class ClientDAO extends BaseDAO {
 		KeyHolder keyHolder = new GeneratedKeyHolder();
 		jdbcTemplate.update(psc, keyHolder);
 		client.setId(keyHolder.getKey().longValue());
+		saveMapping(providerId, client.getId());
 		return client;
+	}
+
+	private void saveMapping(Long providerId, long clientId) {
+		jdbcTemplate.update(SqlConstants.INSERT_PROVIDER_CLIENTS, providerId,
+				clientId);
 	}
 
 	public Client update(Client client) {
