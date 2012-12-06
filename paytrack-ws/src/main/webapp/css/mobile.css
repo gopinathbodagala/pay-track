@@ -1,0 +1,1104 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/*********************
+    Branding
+**********************/
+/* end branding */
+/*
+li.tapactive a {
+	color: #fff !important;
+	text-shadow: none !important;
+}*/
+/* line 95, ../sass/mobile.scss */
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; }
+
+/* line 98, ../sass/mobile.scss */
+body, div.ui-body-c {
+  background: #e9e9e9 url(../img/texture.png) !important; }
+
+/* line 101, ../sass/mobile.scss */
+.tbd {
+  padding: 20px;
+  color: gray;
+  font-size: 120%; }
+
+/* line 106, ../sass/mobile.scss */
+a {
+  text-decoration: none;
+  list-style: none;
+  display: block;
+  font-size: 14px;
+  text-decoration: none; }
+
+/* line 110, ../sass/mobile.scss */
+.ui-header {
+  position: relative; }
+
+/* line 113, ../sass/mobile.scss */
+.ui-page {
+  -webkit-backface-visibility: hidden; }
+
+/* line 117, ../sass/mobile.scss */
+div[data-role="page"] .ui-header {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 0;
+  border-top: 1px solid #84cced;
+  border-bottom: 1px solid #104c67;
+  padding: 0;
+  height: 44px;
+  background: #3e67ca -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #65bfe8), color-stop(50%, #39ade1), color-stop(50%, #30a9e0), color-stop(100%, #1c87b7));
+  background: #3e67ca -webkit-linear-gradient(#65bfe8, #39ade1 50%, #30a9e0 50%, #1c87b7);
+  background: #3e67ca linear-gradient(#65bfe8, #39ade1 50%, #30a9e0 50%, #1c87b7); }
+/* line 125, ../sass/mobile.scss */
+div[data-role="page"] .ui-header .ui-title {
+  color: white;
+  text-shadow: rgba(0, 0, 0, 0.8) 0 -1px 0;
+  padding: 0;
+  margin: 0 80px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  line-height: 44px;
+  font-size: 20px; }
+
+/* line 137, ../sass/mobile.scss */
+div[data-role="dialog"] .ui-header .ui-title {
+  margin-left: 20px;
+  margin-right: 20px; }
+
+/* line 141, ../sass/mobile.scss */
+.confirmation {
+  padding: 0 0 10px 47px;
+  background: url(../img/checkmark.png) no-repeat left top; }
+/* line 144, ../sass/mobile.scss */
+.confirmation h1 {
+  padding: 9px 0 0 0;
+  margin: 0;
+  font-size: 18px; }
+/* line 149, ../sass/mobile.scss */
+.confirmation div {
+  padding: 20px 0; }
+
+/*****************************
+        Forms
+******************************/
+/* line 157, ../sass/mobile.scss */
+input[type=text], input[type=password], input[type=tel], input[type=date] {
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 16px;
+  height: 44px;
+  padding: 0 !important;
+  width: 96%;
+  padding-left: 11px !important;
+  line-height: 0 !important;
+  color: #000;
+  margin-bottom: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: #fff;
+  -webkit-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.2) 0 2px 4px inset;
+  box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.2) 0 2px 4px inset; }
+
+/* line 171, ../sass/mobile.scss */
+textarea {
+  -webkit-border-radius: 3px !important;
+  border-radius: 3px !important;
+  font-size: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.3) !important;
+  background: #fff !important;
+  -webkit-box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.2) 0 2px 4px inset !important;
+  box-shadow: white 0 1px 0, rgba(0, 0, 0, 0.2) 0 2px 4px inset !important; }
+
+/* line 178, ../sass/mobile.scss */
+.formError {
+  display: none;
+  color: white;
+  font-weight: normal;
+  padding: 6px 8px 8px 8px;
+  margin-bottom: 8px;
+  background: #bc5858;
+  border: 1px solid white;
+  -webkit-border-radius: 6px;
+  border-radius: 6px; }
+
+/* line 188, ../sass/mobile.scss */
+.fieldgroup {
+  padding-bottom: 10px;
+  clear: both; }
+/* line 191, ../sass/mobile.scss */
+.fieldgroup label {
+  float: left;
+  width: 25%;
+  line-height: 44px;
+  padding-left: 7px; }
+/* line 197, ../sass/mobile.scss */
+.fieldgroup label.required {
+  background: url(../img/required.png) no-repeat 0 8px; }
+/* line 200, ../sass/mobile.scss */
+.fieldgroup input {
+  width: 68%; }
+
+/*****************************
+        Buttons
+******************************/
+/* line 209, ../sass/mobile.scss */
+a[data-role=button] {
+  display: block !important;
+  position: relative;
+  height: 46px !important;
+  padding: 0 !important;
+  margin: 15px 0 0 0;
+  line-height: 46px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #3cb8ef), color-stop(100%, #158dc3));
+  background: -webkit-linear-gradient(#3cb8ef, #158dc3);
+  background: linear-gradient(#3cb8ef, #158dc3);
+  border: 1px solid #044562;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
+  color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 2px 6px, rgba(255, 255, 255, 0.3) 2px 2px 0 inset, rgba(255, 255, 255, 0.3) -2px -2px 0 inset, rgba(255, 255, 255, 0.4) 0 2px 0 inset;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 2px 6px, rgba(255, 255, 255, 0.3) 2px 2px 0 inset, rgba(255, 255, 255, 0.3) -2px -2px 0 inset, rgba(255, 255, 255, 0.4) 0 2px 0 inset; }
+/* line 224, ../sass/mobile.scss */
+a[data-role=button]:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #158dc3), color-stop(100%, #00557b));
+  background: -webkit-linear-gradient(#158dc3, #00557b);
+  background: linear-gradient(#158dc3, #00557b);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.6) 0 2px 6px, rgba(255, 255, 255, 0.1) 2px 2px 0 inset, rgba(255, 255, 255, 0.1) -2px -2px 0 inset, rgba(255, 255, 255, 0.2) 0 2px 0 inset;
+  box-shadow: rgba(0, 0, 0, 0.6) 0 2px 6px, rgba(255, 255, 255, 0.1) 2px 2px 0 inset, rgba(255, 255, 255, 0.1) -2px -2px 0 inset, rgba(255, 255, 255, 0.2) 0 2px 0 inset; }
+/* line 230, ../sass/mobile.scss */
+a[data-role=button] img {
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  margin: 0;
+  border: 0; }
+/* line 238, ../sass/mobile.scss */
+a[data-role=button] span {
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-border-radius: 3px !important;
+  border-radius: 3px !important;
+  background: transparent !important;
+  display: block !important;
+  padding: 0 !important;
+  text-align: center !important;
+  margin: 0 !important; }
+
+/* Custom iOS-styled buttons, theme G */
+/* line 250, ../sass/mobile.scss */
+.ui-btn-up-g, .ui-btn-hover-g, .ui-btn-down-g {
+  display: block !important;
+  height: 27px !important;
+  line-height: 27px !important;
+  padding: 0;
+  top: 7px !important;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.6) 0 -1px 0;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  background: transparent url(../img/button.png) center left repeat-x;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  font-size: 12px !important;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-top-color: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 1px inset !important;
+  box-shadow: rgba(255, 255, 255, 0.3) 0 1px 0, rgba(0, 0, 0, 0.3) 0 1px 1px inset !important; }
+
+/* line 268, ../sass/mobile.scss */
+.ui-btn-down-g {
+  background-color: rgba(0, 0, 0, 0.25) !important; }
+
+/* line 274, ../sass/mobile.scss */
+.ui-btn-up-g .ui-btn-inner, .ui-btn-up-g .ui-btn-corner-all, .ui-btn-hover-g .ui-btn-inner, .ui-btn-hover-g .ui-btn-corner-all, .ui-btn-down-g .ui-btn-inner, .ui-btn-down-g .ui-btn-corner-all {
+  border: 0 !important;
+  display: block !important;
+  background: transparent !important;
+  padding: 0 !important;
+  font-size: 12px !important;
+  -webkit-border-radius: 0 !important;
+  border-radius: 0 !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif !important; }
+
+/* line 285, ../sass/mobile.scss */
+.ui-btn-up-g .ui-btn-text, .ui-btn-hover-g .ui-btn-text, .ui-btn-down-g .ui-btn-text {
+  border: 0 !important;
+  padding: 0 10px !important;
+  display: block !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  text-shadow: inherit !important; }
+
+/* line 295, ../sass/mobile.scss */
+.ui-btn-up-g.force_back .ui-btn-inner, .ui-btn-down-g.force_back .ui-btn-inner, .ui-btn-hover-g.force_back .ui-btn-inner {
+  text-indent: 9px !important;
+  background: transparent url(../img/back.png) 8px 50% no-repeat !important; }
+
+/*****************************
+        Tweaking the loading box & indicator
+******************************/
+/* line 304, ../sass/mobile.scss */
+.ui-loader {
+  display: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8) !important;
+  border: 0 !important;
+  z-index: 100;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  margin-left: -75px;
+  margin-top: -50px; }
+/* line 316, ../sass/mobile.scss */
+.ui-loader h1 {
+  font-size: 18px;
+  text-shadow: rgba(0, 0, 0, 0.8) 0 1px 0;
+  text-align: center; }
+/* line 321, ../sass/mobile.scss */
+.ui-loader .ui-icon {
+  position: static;
+  display: block;
+  margin: 50px auto 0 auto;
+  width: 35px;
+  height: 35px;
+  background-color: transparent; }
+
+/* Icon buttons in nav bar */
+/* line 332, ../sass/mobile.scss */
+.ui-btn.icon {
+  padding: 0 !important;
+  margin: 0 !important;
+  float: none !important;
+  height: 44px;
+  width: 55px;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-indent: -9000px;
+  text-decoration: none;
+  border: 0 !important;
+  background: transparent;
+  -webkit-border-radius: 0 !important;
+  border-radius: 0 !important; }
+/* line 347, ../sass/mobile.scss */
+.ui-btn.icon span {
+  display: none !important; }
+
+/* line 351, ../sass/mobile.scss */
+.ui-btn.refresh {
+  background: transparent url(../img/refresh_icon.png) 50% 45% no-repeat; }
+
+/* line 354, ../sass/mobile.scss */
+.ui-header h1.small {
+  font-size: 16px !important;
+  padding-top: 3px; }
+
+/* line 359, ../sass/mobile.scss */
+.ui-input-search {
+  background-color: #fff; }
+
+/* line 362, ../sass/mobile.scss */
+.ui-dialog .ui-content {
+  background-color: #fff; }
+
+/*****************************
+        scroll panel
+******************************/
+/* line 370, ../sass/mobile.scss */
+.pullRefresh {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 58px;
+  top: 0px;
+  background: url(../img/refreshSpinner.gif) no-repeat 28px center;
+  text-align: center;
+  color: #6d8099; }
+/* line 379, ../sass/mobile.scss */
+.pullRefresh img {
+  position: absolute;
+  top: 6px;
+  left: 28px;
+  -webkit-transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.2s; }
+/* line 386, ../sass/mobile.scss */
+.pullRefresh .pullRefreshTxt {
+  padding-top: 12px;
+  padding-bottom: 2px;
+  font-weight: bold; }
+
+/* line 393, ../sass/mobile.scss */
+.jsScroller .scrollPanel {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0; }
+/* line 399, ../sass/mobile.scss */
+.jsScroller .scrollPanel > div:first-child {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  z-index: 99; }
+/* line 407, ../sass/mobile.scss */
+.jsScroller .pullRefresh {
+  display: block; }
+/* line 410, ../sass/mobile.scss */
+.jsScroller .listBottomPad {
+  height: 30px; }
+
+/* line 414, ../sass/mobile.scss */
+.vTouchScrollBar {
+  position: absolute;
+  top: 0;
+  width: 3px !important;
+  right: 2px;
+  opacity: .6;
+  background: #555;
+  border: 1px solid #333;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  z-index: 999; }
+
+/* line 425, ../sass/mobile.scss */
+#inboxLastUpdate {
+  font-size: 12px; }
+
+/* end scroll panel */
+/*****************************
+        Home
+******************************/
+/* line 434, ../sass/mobile.scss */
+#home {
+  background: transparent url(../img/betaleaf.png) right 44px no-repeat !important; }
+
+/* line 437, ../sass/mobile.scss */
+#apple {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  margin-left: -129px; }
+
+/* line 443, ../sass/mobile.scss */
+h2#welcome {
+  position: relative;
+  font-size: 16px;
+  padding: 15px 0 0 0;
+  color: #555;
+  margin: 0; }
+
+/* line 450, ../sass/mobile.scss */
+nav {
+  padding-top: 10px; }
+/* line 452, ../sass/mobile.scss */
+nav ul {
+  position: relative;
+  padding: 0;
+  margin: 0 0 20px 0;
+  list-style: none;
+  border: 1px solid #9c9c9c;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+        /*
+        li:first-child:last-child a {
+            @include border-radius(10px);
+		}*/ }
+/* line 461, ../sass/mobile.scss */
+nav ul li {
+  height: 44px;
+  position: relative;
+  padding: 0;
+  margin: 0; }
+/* line 58, ../sass/mobile.scss */
+nav ul li.tapactive a {
+  background: #65bfe8 -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #65bfe8), color-stop(100%, #1e91c5)) !important;
+  background: #65bfe8 -webkit-linear-gradient(#65bfe8, #1e91c5) !important;
+  background: #65bfe8 linear-gradient(#65bfe8, #1e91c5) !important;
+  color: #fff !important;
+  text-shadow: none !important; }
+/* line 63, ../sass/mobile.scss */
+nav ul li.tapactive small {
+  color: #228cc6;
+  background: #fff; }
+/* line 467, ../sass/mobile.scss */
+nav ul li a {
+  display: block;
+  height: 43px;
+  border-top: 1px solid #c7c7c7;
+  line-height: 46px;
+  text-indent: 14px;
+  font-size: 16px;
+  color: #2a2a2a !important;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #f3f3f3));
+  background: -webkit-linear-gradient(#ffffff, #f3f3f3);
+  background: linear-gradient(#ffffff, #f3f3f3);
+  text-decoration: none; }
+/* line 477, ../sass/mobile.scss */
+nav ul li a:active {
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e3e3e3), color-stop(100%, #f3f3f3));
+  background: -webkit-linear-gradient(#e3e3e3, #f3f3f3);
+  background: linear-gradient(#e3e3e3, #f3f3f3);
+  -webkit-box-shadow: white 0 -1px 0 inset;
+  box-shadow: white 0 -1px 0 inset; }
+/* line 481, ../sass/mobile.scss */
+nav ul li a small {
+  display: block;
+  position: absolute;
+  right: 27px;
+  top: 11px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: rgba(0, 0, 0, 0.3) 0 1px 0;
+  -webkit-font-smoothing: antialiased;
+  padding: 2px 10px 3px 10px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  background: #228cc6;
+  text-indent: 0;
+  line-height: 16px; }
+/* line 497, ../sass/mobile.scss */
+nav ul li a img {
+  position: absolute;
+  left: 10px;
+  top: 10px; }
+/* line 504, ../sass/mobile.scss */
+nav ul li:first-child a {
+  height: 44px;
+  border-top: 0 !important;
+  -webkit-border-top-left-radius: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  border-top-right-radius: 10px; }
+/* line 509, ../sass/mobile.scss */
+nav ul li:last-child a {
+  line-height: 44px;
+  -webkit-border-bottom-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px; }
+/* line 517, ../sass/mobile.scss */
+nav ul li.messages a, nav ul li.prescription a, nav ul li.appointment a {
+  text-indent: 44px; }
+/* line 520, ../sass/mobile.scss */
+nav ul li.prescription a img {
+  left: 13px; }
+/* line 525, ../sass/mobile.scss */
+nav ul.pushable li:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 19px;
+  height: 44px;
+ }
+/* line 535, ../sass/mobile.scss */
+nav ul.pushable li.tapactive:after {
+  background-position: -38px center; }
+
+/* line 541, ../sass/mobile.scss */
+#feedbackLink {
+  display: block;
+  float: right;
+  width: 80px;
+  padding: 5px 10px 5px 5px;
+  margin-top: -10px;
+  text-align: right; }
+
+/* line 550, ../sass/mobile.scss */
+#addToHome {
+  position: fixed;
+  visibility: hidden;
+  color: #000;
+  font-weight: normal;
+  bottom: 0;
+  padding: 0  15px 18px 15px;
+  -webkit-transform: translate3d(0, 100px, 0);
+  -webkit-transition: -webkit-transform 0.7s;
+  opacity: .96; }
+/* line 560, ../sass/mobile.scss */
+#addToHome div {
+  font-size: 15px;
+  border: 1px solid #96b4d7;
+  background: url(../img/homeBoxClose.png) no-repeat right top, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #cee6f0));
+  background: url(../img/homeBoxClose.png) no-repeat right top, -webkit-linear-gradient(#ffffff, #cee6f0);
+  background: url(../img/homeBoxClose.png) no-repeat right top, linear-gradient(#ffffff, #cee6f0);
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 10px;
+  padding: 8px 25px 8px 12px; }
+/* line 567, ../sass/mobile.scss */
+#addToHome div span {
+  display: block;
+  padding-left: 69px;
+  background: url(../img/addtohome_icon.png) no-repeat; }
+/* line 573, ../sass/mobile.scss */
+#addToHome img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin-left: -9px; }
+
+/* end home */
+/* review */
+/*
+#rx li.tapactive, #apptNew li.tapactive {
+	@include background(rgb(101,191,232) linear-gradient(rgb(101,191,232), rgb(30,145,197)) !important);
+}*/
+/*****************************
+        Messages
+******************************/
+/* line 592, ../sass/mobile.scss */
+ul.inbox {
+  list-style: none;
+  padding: 0 0 15px 0;
+  border-top: 1px solid #dadada;
+  margin: -15px -15px 0 -15px; }
+/* line 597, ../sass/mobile.scss */
+ul.inbox li {
+  position: relative;
+  padding: 0;
+  margin: 0; }
+/* line 58, ../sass/mobile.scss */
+ul.inbox li.tapactive a {
+  background: #65bfe8 -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #65bfe8), color-stop(100%, #1e91c5)) !important;
+  background: #65bfe8 -webkit-linear-gradient(#65bfe8, #1e91c5) !important;
+  background: #65bfe8 linear-gradient(#65bfe8, #1e91c5) !important;
+  color: #fff !important;
+  text-shadow: none !important; }
+/* line 63, ../sass/mobile.scss */
+ul.inbox li.tapactive small {
+  color: #228cc6;
+  background: #fff; }
+/* line 602, ../sass/mobile.scss */
+ul.inbox li a {
+  position: relative;
+  display: block;
+  background: #fff;
+  padding: 10px 0 11px 35px;
+  text-decoration: none;
+  border-bottom: 1px solid #d3d3d3; }
+/* line 610, ../sass/mobile.scss */
+ul.inbox li h2, ul.inbox li h3, ul.inbox li h4, ul.inbox li h5 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  line-height: 1em; }
+/* line 616, ../sass/mobile.scss */
+ul.inbox li h2 {
+  font-size: 18px;
+  color: #000;
+  font-weight: bold; }
+/* line 621, ../sass/mobile.scss */
+ul.inbox li h3 {
+  font-size: 14px;
+  color: #555; }
+/* line 625, ../sass/mobile.scss */
+ul.inbox li h4 {
+  font-size: 13px;
+  color: #999;
+  padding-left: 20px;
+  background: transparent url(../img/messages_icon_16.png) no-repeat left center; }
+/* line 631, ../sass/mobile.scss */
+ul.inbox li h5 {
+  position: absolute;
+  top: 10px;
+  right: 27px;
+  font-size: 14px;
+  color: #999; }
+/* line 639, ../sass/mobile.scss */
+ul.inbox li.unread a {
+  background: white url(../img/unread.png) 9px 50% no-repeat; }
+/* line 642, ../sass/mobile.scss */
+ul.inbox li.more a {
+  text-align: center;
+  border-bottom-color: #aaa;
+  padding: 15px; }
+/* line 646, ../sass/mobile.scss */
+ul.inbox li.more a:active {
+  text-decoration: underline; }
+/* line 650, ../sass/mobile.scss */
+ul.inbox li:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 19px;
+  height: 100%;
+  background: transparent url(../img/arrow.png) 2px center no-repeat; }
+/* line 660, ../sass/mobile.scss */
+ul.inbox li.tapactive:after {
+  background-position: -38px center; }
+/* line 663, ../sass/mobile.scss */
+ul.inbox li.more:after {
+  display: none !important; }
+/* line 666, ../sass/mobile.scss */
+ul.inbox li.appointment h4 {
+  background-image: url(../img/calendar_icon_16.png); }
+/* line 670, ../sass/mobile.scss */
+ul.inbox li.tapactive h2, ul.inbox li.tapactive h3, ul.inbox li.tapactive h4, ul.inbox li.tapactive h5 {
+  color: #fff !important; }
+
+/* line 675, ../sass/mobile.scss */
+.messageBody p {
+  font-size: 16px;
+  line-height: 1.4em;
+  padding: 0;
+  margin: 0 0 1.5em 0; }
+
+/* line 681, ../sass/mobile.scss */
+#noMessages {
+  color: #82858e;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  background: url(../img/nomessages.png) no-repeat center 30px;
+  padding-top: 120px; }
+
+/* line 689, ../sass/mobile.scss */
+#inboxRefresh {
+  float: right;
+  padding: 10px 0 10px 22px !important;
+  width: 60px;
+  position: relative; }
+/* line 694, ../sass/mobile.scss */
+#inboxRefresh span {
+  background-position: -323px 50%; }
+
+/* line 699, ../sass/mobile.scss */
+.messageHeader {
+  padding: 10px;
+  background-color: #f7f7f6; }
+
+/* line 703, ../sass/mobile.scss */
+.messageSubject {
+  font-weight: bold;
+  font-size: 120%;
+  padding-bottom: 2px; }
+
+/* line 708, ../sass/mobile.scss */
+.messageTo {
+  padding: 1px 0; }
+
+/* line 711, ../sass/mobile.scss */
+.messageHead span, .messageTo span {
+  color: gray;
+  text-align: right;
+  padding-right: 5px;
+  width: 50px;
+  display: inline-block; }
+
+/* line 718, ../sass/mobile.scss */
+.messageBody {
+  padding: 10px 10px 20px 20px;
+  border-bottom: 2px dotted #c8c8c8; }
+
+/* line 723, ../sass/mobile.scss */
+.apptDetails {
+  padding-left: 5px;
+  padding-bottom: 20px;
+  width: 90%; }
+
+/* line 728, ../sass/mobile.scss */
+.apptDetails div {
+  border-bottom: 1px dotted silver;
+  clear: both;
+  height: 0;
+  margin: 2px 0; }
+
+/* line 734, ../sass/mobile.scss */
+.apptDetails div:last-child {
+  border: 0; }
+
+/* line 737, ../sass/mobile.scss */
+.apptDetails label {
+  display: block;
+  width: 90px;
+  float: left;
+  text-align: right; }
+
+/* line 743, ../sass/mobile.scss */
+.apptDetails span {
+  display: block;
+  margin-left: 100px;
+  font-weight: bold;
+  font-size: 90%; }
+
+/* line 749, ../sass/mobile.scss */
+#msgDetails .ui-content, #msgReply .ui-content {
+  background: #fff;
+  padding: 0; }
+
+/* line 753, ../sass/mobile.scss */
+#msgDetails form {
+  display: none; }
+
+/* line 756, ../sass/mobile.scss */
+#msgReply textarea {
+  width: 96%;
+  height: 150px;
+  border: 0; }
+
+/* line 761, ../sass/mobile.scss */
+#msgReply .originalMsg {
+  padding: 10px 10px 15px 10px; }
+
+/* line 764, ../sass/mobile.scss */
+#msgReply .originalMsg small {
+  position: absolute;
+  color: gray; }
+
+/* line 768, ../sass/mobile.scss */
+#msgReply .originalMsg div {
+  margin-left: 110px;
+  margin-top: 8px;
+  border-bottom: 1px solid silver; }
+
+/* end messages */
+/*****************************
+        appointments
+******************************/
+/* line 779, ../sass/mobile.scss */
+#apptNew2 .ui-btn {
+  text-align: left !important; }
+
+/* line 782, ../sass/mobile.scss */
+.apptDate {
+  font-weight: normal;
+  color: #2973d8; }
+
+/* line 786, ../sass/mobile.scss */
+.apptClinic {
+  font-weight: normal; }
+
+/* line 790, ../sass/mobile.scss */
+.apptDetails {
+  padding-left: 5px;
+  padding-bottom: 20px;
+  width: 90%; }
+/* line 794, ../sass/mobile.scss */
+.apptDetails div {
+  border-bottom: 1px dotted silver;
+  clear: both;
+  padding: 2px 0; }
+/* line 799, ../sass/mobile.scss */
+.apptDetails label {
+  width: 60px;
+  float: left;
+  text-align: right;
+  padding-right: 10px; }
+/* line 805, ../sass/mobile.scss */
+.apptDetails span {
+  font-weight: bold;
+  font-size: 90%; }
+
+/* line 811, ../sass/mobile.scss */
+#selDoctorLocation h3 {
+  margin-top: 0;
+  margin-bottom: 2px; }
+
+/* line 815, ../sass/mobile.scss */
+#selectedLocation {
+  padding-bottom: 15px; }
+/* line 817, ../sass/mobile.scss */
+#selectedLocation h1 {
+  font-size: 20px;
+  font-weight: bold;
+  white-space: normal;
+  margin: 0;
+  padding: 0 0 4px 0; }
+
+/* line 825, ../sass/mobile.scss */
+#selDoctorLocation ul li h1, #selectedLocation h2 {
+  font-size: 18px;
+  font-weight: bold;
+  white-space: normal;
+  margin: 0;
+  padding: 0; }
+
+/* line 832, ../sass/mobile.scss */
+#selDoctorLocation ul li h2, #selectedLocation h3 {
+  font-size: 18px;
+  font-weight: normal;
+  white-space: normal;
+  margin: 0;
+  padding: 0; }
+
+/* line 839, ../sass/mobile.scss */
+#selDoctorLocation ul li h3, #selectedLocation h4 {
+  font-size: 14px;
+  font-weight: normal;
+  white-space: normal;
+  margin: 0;
+  padding: 0; }
+
+/* end appointments */
+/*****************************
+        Rx
+******************************/
+/* line 853, ../sass/mobile.scss */
+#rxMain ul li small {
+  display: none;
+  font-weight: normal;
+  color: gray; }
+
+/* line 858, ../sass/mobile.scss */
+a.add_pharmacy {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0; }
+/* line 866, ../sass/mobile.scss */
+a.add_pharmacy:active {
+  text-decoration: underline; }
+
+/* line 870, ../sass/mobile.scss */
+.rxDetails {
+  background: #fff;
+  border: 1px solid silver;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 6px 10px 14px 10px;
+  margin-bottom: 20px; }
+/* line 876, ../sass/mobile.scss */
+.rxDetails div {
+  border-bottom: 1px dotted silver;
+  clear: both;
+  padding-bottom: 6px; }
+/* line 881, ../sass/mobile.scss */
+.rxDetails label {
+  width: 90px;
+  float: left;
+  padding-top: 6px;
+  text-align: right;
+  padding-right: 10px; }
+/* line 888, ../sass/mobile.scss */
+.rxDetails span {
+  display: block;
+  font-weight: bold;
+  font-size: 90%;
+  padding-top: 8px;
+  margin-left: 100px; }
+
+/* end Rx */
+/*****************************
+        Sign in
+******************************/
+/* line 902, ../sass/mobile.scss */
+footer {
+  display: block;
+  padding: 0;
+  margin: 5px 0 0 0;
+  text-align: center; }
+/* line 907, ../sass/mobile.scss */
+footer h5 {
+  padding: 0 0 8px 0;
+  margin: 0; }
+/* line 910, ../sass/mobile.scss */
+footer h5 a {
+  display: block;
+  text-indent: -9000px;
+  text-decoration: none;
+  background: transparent url(../img/footer_logo.png) center center no-repeat;
+  height: 19px; }
+/* line 918, ../sass/mobile.scss */
+footer h6 {
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  font-size: 12px;
+  color: #888; }
+
+/* line 926, ../sass/mobile.scss */
+form.login {
+  padding: 0;
+  margin: 0; }
+/* line 929, ../sass/mobile.scss */
+form.login fieldset {
+  border: 0;
+  margin: 0;
+  padding: 12px 15px 15px 15px; }
+/* line 934, ../sass/mobile.scss */
+form.login h2 {
+  padding: 11px 15px;
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+  color: #053144;
+  line-height: 1.5em;
+  text-shadow: #fff 0 1px 0; }
+/* line 943, ../sass/mobile.scss */
+form.login h3 {
+  background: transparent url(../img/separator.png) top left repeat-x;
+  font-weight: normal;
+  padding: 15px 0 0 0;
+  text-indent: 15px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: #fff 0 1px 0;
+  margin: 0; }
+
+/* line 954, ../sass/mobile.scss */
+#login {
+  background: transparent url(../img/betaleaf.png) right 44px no-repeat !important; }
+
+/* line 957, ../sass/mobile.scss */
+#betaSpacer {
+  float: right;
+  width: 80px;
+  height: 40px;
+  background: transparent; }
+
+/* end Sign in */
+/*****************************
+        Feedback
+******************************/
+/* line 968, ../sass/mobile.scss */
+.commentContainer {
+  clear: both;
+  padding-top: 10px;
+  padding-bottom: 18px; }
+
+/* line 973, ../sass/mobile.scss */
+.moreFeedbackContainer {
+  padding-top: 15px; }
+
+/* line 976, ../sass/mobile.scss */
+#chkContactMe {
+  position: relative;
+  display: block;
+  font-weight: normal;
+  background: #fff;
+  border: 1px solid silver;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  padding: 8px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+/* line 986, ../sass/mobile.scss */
+#chkContactMe span {
+  display: block;
+  color: gray;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 32px;
+  line-height: 32px; }
+/* line 994, ../sass/mobile.scss */
+#chkContactMe div {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 8px;
+  right: 10px;
+  background: url(../img/checkboxes.png) no-repeat 0 -65px; }
+/* line 1002, ../sass/mobile.scss */
+#chkContactMe.checked span {
+  color: #2489CE; }
+/* line 1005, ../sass/mobile.scss */
+#chkContactMe.checked div {
+  background-position: 0 -97px; }
+
+/* end feedback */
+/* NPS styles */
+/* line 1012, ../sass/mobile.scss */
+.npsScale {
+  position: relative; }
+
+/* line 1015, ../sass/mobile.scss */
+.npsScale label {
+  float: left;
+  width: 50%;
+  font-size: 9pt;
+  margin-top: 2px; }
+
+/* line 1021, ../sass/mobile.scss */
+.nps {
+  height: 38px;
+  line-height: 38px; }
+
+/* line 1025, ../sass/mobile.scss */
+.nps div {
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  overflow: hidden; }
+
+/* line 1031, ../sass/mobile.scss */
+.nps div span {
+  display: block;
+  height: 96%;
+  background: #fff;
+  border: 1px solid silver;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-left: 1px;
+  cursor: pointer; }
+
+/* line 1040, ../sass/mobile.scss */
+.nps div.sel span, .npsScale div.big {
+  background-color: #2567AB;
+  color: #fff; }
+
+/* line 1044, ../sass/mobile.scss */
+.npsScale div.big {
+  display: none;
+  position: absolute;
+  top: 0;
+  margin-top: -4px;
+  margin-left: -2px;
+  font-size: 140%;
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #5f9cc5), color-stop(1, #396b9e));
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4); }
+
+/* end NPS styles */
+/* line 1058, ../sass/mobile.scss */
+.stars {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  margin: 0px auto; }
+/* line 1063, ../sass/mobile.scss */
+.stars div {
+  display: inline-block;
+  background: url(../img/star.png) no-repeat center top;
+  width: 40px;
+  height: 50px; }
+/* line 1068, ../sass/mobile.scss */
+.stars div.sel {
+  background-position: center -75px; }
+/* line 1072, ../sass/mobile.scss */
+.stars label {
+  position: absolute;
+  bottom: 4px;
+  color: gray;
+  font-size: 12px;
+  left: 50%;
+  margin-left: -50px;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s; }
