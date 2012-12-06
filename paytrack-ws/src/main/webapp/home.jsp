@@ -48,10 +48,11 @@
 					<ul class="pushable">
 						<li class="messages tappable"><a id="ADDPAYMENT"
 							href="./add_payment.do" data-theme="g" data-transition="slideup"
-							data-direction="reverse">ADD PAYMENT</a> <a id="ADDPAYMENT"
+							data-direction="reverse">ADD PAYMENT</a> </li>
+							
+						<li>	<a id="ADDPAYMENT"
 							href="./add_client.do" data-theme="g" data-transition="slideup"
-							data-direction="reverse">ADD Client</a></li>
-						<!-- <li class="providers"><a href="providers.html">Providers</a></li> -->
+							data-direction="reverse">&nbsp;&nbsp;ADD Client</a></li>
 
 					</ul>
 
