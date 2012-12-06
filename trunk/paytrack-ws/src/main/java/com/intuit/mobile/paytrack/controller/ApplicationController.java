@@ -8,6 +8,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -73,10 +74,10 @@ public class ApplicationController {
 	}
 
 	@RequestMapping("home.do")
-	public ModelAndView showHome(@CookieValue("providerId") String providerId) {
+	public ModelAndView showHome(@CookieValue(value="providerId",defaultValue="") String providerId) {
 		String viewName = "home";
-		if (providerId == null) {
-			viewName = "add-provider";
+		if (StringUtils.isBlank(providerId)) {
+			viewName = "add_provider";
 		}
 		ModelAndView modelAndView = new ModelAndView(viewName);
 		return modelAndView;
@@ -92,13 +93,13 @@ public class ApplicationController {
 
 	@RequestMapping("show-provider.do")
 	public ModelAndView showProvider() {
-		ModelAndView modelAndView = new ModelAndView("add-provider");
+		ModelAndView modelAndView = new ModelAndView("add_provider");
 		return modelAndView;
 	}
 
-	@RequestMapping("show-client.do")
+	@RequestMapping("add_client.do")
 	public ModelAndView showClient() {
-		ModelAndView modelAndView = new ModelAndView("add-client");
+		ModelAndView modelAndView = new ModelAndView("add_client");
 		return modelAndView;
 	}
 
@@ -109,10 +110,10 @@ public class ApplicationController {
 		return modelAndView;
 	}
 
-	@RequestMapping("show-receipt.do")
+	@RequestMapping("add_payment.do")
 	public ModelAndView showReceipt(@CookieValue("providerId") String providerId) {
 		Clients clients = clientDAO.selectAll(Long.valueOf(providerId));
-		ModelAndView modelAndView = new ModelAndView("add-receipt");
+		ModelAndView modelAndView = new ModelAndView("add_payment");
 		modelAndView.addObject("clients", clients);
 		return modelAndView;
 	}
