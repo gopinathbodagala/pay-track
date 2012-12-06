@@ -30,6 +30,10 @@
 	<mapping wildcard="true">
 		<class-a>com.intuit.mobile.paytrack.dbo.ReceiptDO</class-a>
 		<class-b>com.intuit.mobile.paytrack.jaxb.Receipt</class-b>
+		<field>
+			<a>paymentDate</a>
+			<b>date</b>
+		</field>
 	</mapping>
 	
 </mappings>
