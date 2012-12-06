@@ -38,11 +38,11 @@
 		<div data-role="header" data-theme="b" data-position="fixed">
 			<h1>PayTrack</h1>
 		</div>
-		<img src="img/apple.png" id="apple">
 
 
 		<div class="scrollPanel">
 			<div data-role="content">
+			<form method="post" action="./save-client.do">
 				<h2>First Name</h2>
 				<input type="text" name="firstName" />
 				<h2>Last Name</h2>
@@ -55,7 +55,7 @@
 				<textarea></textarea>
 				<input type="submit" value="Save" />
 
-
+</form>
 			</div>
 			<!-- /content -->
 			<a id="addToHome">
