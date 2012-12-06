@@ -21,19 +21,17 @@
 <link rel="apple-touch-icon" sizes="114x114"
 	href="img/apple-touch-icon-114x114.png">
 
-<link rel="stylesheet" href="jquery/jquery.mobile-1.0.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
 <link rel="stylesheet" href="css/mobile.css" />
-<script type="text/javascript" src="jquery/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
 	// configure jQMobile settings before auto-init which occurrs when the script loads
 	$(document).bind("mobileinit", function() {
 		$.mobile.touchOverflowEnabled = false;
 	});
 </script>
-<script type="text/javascript" src="jquery/jquery.mobile-1.0.min.js"></script>
-<script type="text/javascript" src="js/iHealthMobile.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 
-<script type="text/javascript" src="js/jquery.touchScroll-1.16.min.js"></script>
 </head>
 <body>
 
