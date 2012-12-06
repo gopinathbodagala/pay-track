@@ -32,8 +32,6 @@
 	<div data-role="header" data-theme="b" data-position="fixed">
 		<h1>PayTrack</h1>
 	</div>
-	<img src="img/apple.png" id="apple">
-
     
     <div class="scrollPanel">
 	<div data-role="content">
