@@ -47,23 +47,25 @@
 				<form method="post" action="./save-receipt.do">
 					<h2>Client</h2>
 					<select name="clientId">
-						
-						<%Clients clients =  (Clients) request.getAttribute("clients"); 
-						List<Client> clientList = (List<Client>)clients.getClients();
-						for(int i=0 ;i < clientList.size(); i++){
+
+						<%
+							Clients clients = (Clients) request.getAttribute("clients");
+							List<Client> clientList = (List<Client>) clients.getClients();
+							for (int i = 0; i < clientList.size(); i++) {
 						%>
-						<option value="<%=clientList.get(i).getId()%>"><%= clientList.get(i).getFirstName()%></option>
-						<%} %>
-						
+						<option value="<%=clientList.get(i).getId()%>"><%=clientList.get(i).getFirstName()%></option>
+						<%
+							}
+						%>
+
 					</select>
 					<h2>From</h2>
 					<input type="date" name="from" id="date" value="" />
 					<h2>To</h2>
 					<input type="date" name="to" id="date" value="" />
 					<h2>Amount</h2>
-					<input type="text" name="amount" />
-					 <input type="submit"
-						value="Generate Report" />
+					<input type="text" name="amount" /> <input type="submit"
+						value="Generate Receipt" />
 
 				</form>
 			</div>

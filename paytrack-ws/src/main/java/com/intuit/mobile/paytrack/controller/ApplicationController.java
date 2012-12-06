@@ -1,5 +1,6 @@
 package com.intuit.mobile.paytrack.controller;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -121,6 +122,9 @@ public class ApplicationController {
 	@RequestMapping("save-receipt.do")
 	public ModelAndView saveReceipt(@CookieValue("providerId") String providerId, Long clientId,
 			Receipt receipt) {
+		if(receipt.getDate() == null){
+			receipt.setDate(new Date());
+		}
 		receiptDAO.save(Long.valueOf(providerId), clientId, receipt);
 		ModelAndView modelAndView = new ModelAndView("home");
 		return modelAndView;
