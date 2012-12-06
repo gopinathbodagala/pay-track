@@ -67,7 +67,6 @@ span.comment {
 	font-size: 10pt;
 }
 
-
 p {
 	margin-bottom: 0;
 	margin-left: 30px;
@@ -329,7 +328,7 @@ textarea {
 }
 
 .mask {
-	filter: alpha(opacity =   80);
+	filter: alpha(opacity =     80);
 	background-color: #222222;
 	bottom: 0;
 	left: 0;
@@ -396,14 +395,32 @@ textarea {
 .techDiv>span {
 	font-weight: bold;
 }
+
 .contentData {
-    line-height: 25px;
+	line-height: 25px;
 }
+
 .description {
-    color: #258AAF;
-    font-weight: bold;
-    line-height: 50px;
+	color: #258AAF;
+	font-weight: bold;
+	line-height: 50px;
 }
-.imagecontent{
-	float:left;
+
+.imagecontent {
+	float: left;
+}
+
+th {
+	padding-right: 20px;
+	text-align: left;
+}
+
+td {
+	padding-right: 10px;
+	padding-top: 10px;
+}
+
+.loginClass {
+	margin: 0 auto;
+	width: 50%;
 }
