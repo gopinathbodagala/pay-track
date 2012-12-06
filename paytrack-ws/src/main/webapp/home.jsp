@@ -50,7 +50,7 @@
 							
 						<li>	<a id="ADDPAYMENT"
 							href="./add_client.do" data-theme="g" data-transition="slideup"
-							data-direction="reverse">&nbsp;&nbsp;ADD Client</a></li>
+							data-direction="reverse">&nbsp;&nbsp;&nbsp;&nbsp;ADD CLIENT</a></li>
 
 					</ul>
 

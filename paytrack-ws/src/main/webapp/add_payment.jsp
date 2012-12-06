@@ -62,9 +62,6 @@
 					<input type="date" name="to" id="date" value="" />
 					<h2>Amount</h2>
 					<input type="text" name="amount" />
-					<h2>Payment Date</h2>
-					<input type="text" name="date" /> <input type="submit"
-						value="Generate Report" />
 
 				</form>
 			</div>
