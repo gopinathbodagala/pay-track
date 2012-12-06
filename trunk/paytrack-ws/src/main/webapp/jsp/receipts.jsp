@@ -1,3 +1,4 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.Set"%>
 <%@page import="com.intuit.mobile.paytrack.jaxb.Client"%>
@@ -25,7 +26,8 @@
 
 			<div id="" class="ctologo">
 				<a href="index.jsp" class="titlehipher" title="Intuit"> <img
-					class="headerimage" src="images/cto-dev.png"> </a>
+					class="headerimage" src="images/cto-dev.png">
+				</a>
 			</div>
 			<div class="title">PayTrack</div>
 
@@ -33,15 +35,19 @@
 		<div class="content">
 			<table>
 				<thead>
-					<th>Client</th>
-					<th>Email Id</th>
-					<th>From Date</th>
-					<th>To Date</th>
-					<th>Amount</th>
-					<th>Payment Date</th>
+					<tr>
+						<th>Client</th>
+						<th>Email Id</th>
+						<th>From Date</th>
+						<th>To Date</th>
+						<th>Amount</th>
+						<th>Payment Date</th>
+					<tr>
 				</thead>
 				<tbody>
 					<%
+						SimpleDateFormat format = new SimpleDateFormat("dd-MMM-yyyy");
+
 						Map<Long, List<Receipt>> clientIdReceiptMap = (Map<Long, List<Receipt>>) request
 								.getAttribute("clientIdReceiptMap");
 						Map<Long, Client> clientIdClientMap = (Map<Long, Client>) request
@@ -54,15 +60,15 @@
 								Long clientId = (Long) iterator.next();
 								List<Receipt> receipts = clientIdReceiptMap.get(clientId);
 								Client client = clientIdClientMap.get(clientId);
-								for (int i = 0; i < receipts.size(); i++) {
+								for (Receipt receipt : receipts) {
 					%>
 					<tr>
 						<td><%=client.getFirstName()%></td>
 						<td><%=client.getEmail()%></td>
-						<td><%=receipts.get(i).getFrom()%></td>
-						<td><%=receipts.get(i).getTo()%></td>
-						<td><%=receipts.get(i).getAmount()%></td>
-						<td><%=receipts.get(i).getDate()%></td>
+						<td><%=format.format(receipt.getFrom())%></td>
+						<td><%=format.format(receipt.getTo())%></td>
+						<td><%=receipt.getAmount()%></td>
+						<td><%=format.format(receipt.getDate())%></td>
 					</tr>
 					<%
 						}

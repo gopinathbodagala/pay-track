@@ -2,7 +2,6 @@ package com.intuit.mobile.paytrack.dbo;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.math.BigDecimal;
 
 
 /**
@@ -14,7 +13,7 @@ public class ReceiptDO implements Serializable {
 
 	private int id;
 
-	private BigDecimal amount;
+	private Double amount;
 
 	private Timestamp from;
 
@@ -35,11 +34,11 @@ public class ReceiptDO implements Serializable {
 		this.id = id;
 	}
 
-	public BigDecimal getAmount() {
+	public Double getAmount() {
 		return this.amount;
 	}
 
-	public void setAmount(BigDecimal amount) {
+	public void setAmount(Double amount) {
 		this.amount = amount;
 	}
 
