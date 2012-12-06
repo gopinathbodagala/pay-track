@@ -62,6 +62,8 @@
 					<input type="date" name="to" id="date" value="" />
 					<h2>Amount</h2>
 					<input type="text" name="amount" />
+					 <input type="submit"
+						value="Generate Report" />
 
 				</form>
 			</div>
