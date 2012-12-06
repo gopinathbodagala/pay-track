@@ -98,8 +98,10 @@ public class ApplicationController {
 	}
 	
 	@RequestMapping("show-receipt.do")
-	public ModelAndView showReceipt() {
+	public ModelAndView showReceipt(Long providerId) {
+		Clients clients = clientDAO.selectAll(providerId);
 		ModelAndView modelAndView = new ModelAndView("add-receipt");
+		modelAndView.addObject("clients", clients);
 		return modelAndView;
 	}
 	
