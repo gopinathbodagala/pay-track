@@ -1,6 +1,5 @@
 package com.intuit.mobile.paytrack.controller;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,6 +24,7 @@ import com.intuit.mobile.paytrack.jaxb.Provider;
 import com.intuit.mobile.paytrack.jaxb.Providers;
 import com.intuit.mobile.paytrack.jaxb.Receipt;
 import com.intuit.mobile.paytrack.jaxb.Receipts;
+import com.intuit.mobile.paytrack.resource.ProviderResource;
 
 @Controller
 public class ApplicationController {
@@ -37,6 +37,9 @@ public class ApplicationController {
 
 	@Autowired
 	private ReceiptDAO receiptDAO;
+
+	@Autowired
+	private ProviderResource providerResource;
 
 	@RequestMapping("receipts.do")
 	public ModelAndView getReceipts(String emailId, HttpServletRequest request) {
@@ -75,7 +78,8 @@ public class ApplicationController {
 	}
 
 	@RequestMapping("home.do")
-	public ModelAndView showHome(@CookieValue(value="providerId",defaultValue="") String providerId) {
+	public ModelAndView showHome(
+			@CookieValue(value = "providerId", defaultValue = "") String providerId) {
 		String viewName = "home";
 		if (StringUtils.isBlank(providerId)) {
 			viewName = "add_provider";
@@ -85,7 +89,8 @@ public class ApplicationController {
 	}
 
 	@RequestMapping("save-provider.do")
-	public ModelAndView saveProvider(Provider provider, HttpServletResponse response) {
+	public ModelAndView saveProvider(Provider provider,
+			HttpServletResponse response) {
 		provider = providerDAO.save(provider);
 		ModelAndView modelAndView = new ModelAndView("home");
 		response.addCookie(new Cookie("providerId", provider.getId().toString()));
@@ -105,7 +110,8 @@ public class ApplicationController {
 	}
 
 	@RequestMapping("save-client.do")
-	public ModelAndView saveClient(@CookieValue("providerId") String providerId, Client client) {
+	public ModelAndView saveClient(
+			@CookieValue("providerId") String providerId, Client client) {
 		clientDAO.save(Long.valueOf(providerId), client);
 		ModelAndView modelAndView = new ModelAndView("home");
 		return modelAndView;
@@ -120,12 +126,13 @@ public class ApplicationController {
 	}
 
 	@RequestMapping("save-receipt.do")
-	public ModelAndView saveReceipt(@CookieValue("providerId") String providerId, Long clientId,
+	public ModelAndView saveReceipt(
+			@CookieValue("providerId") String providerId, Long clientId,
 			Receipt receipt) {
-		if(receipt.getDate() == null){
-			receipt.setDate(new Date());
-		}
-		receiptDAO.save(Long.valueOf(providerId), clientId, receipt);
+
+		receipt = providerResource.addReceipt(Long.valueOf(providerId),
+				clientId, receipt);
+
 		ModelAndView modelAndView = new ModelAndView("home");
 		return modelAndView;
 	}
