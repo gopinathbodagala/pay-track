@@ -4,10 +4,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -24,13 +27,12 @@ import com.intuit.mobile.paytrack.jaxb.Receipts;
 @Controller
 public class ApplicationController {
 
-	
 	@Autowired
 	private ProviderDAO providerDAO;
 
 	@Autowired
 	private ClientDAO clientDAO;
-	
+
 	@Autowired
 	private ReceiptDAO receiptDAO;
 
@@ -69,45 +71,56 @@ public class ApplicationController {
 		return modelAndView;
 
 	}
-		
-	@RequestMapping("save-provider.do")
-	public ModelAndView saveProvider(Provider provider) {
-		provider = providerDAO.save(provider);
-		ModelAndView modelAndView = new ModelAndView("home");
-		modelAndView.addObject("provider", provider);
+
+	@RequestMapping("home.do")
+	public ModelAndView showHome(@CookieValue("providerId") String providerId) {
+		String viewName = "home";
+		if (providerId == null) {
+			viewName = "add-provider";
+		}
+		ModelAndView modelAndView = new ModelAndView(viewName);
 		return modelAndView;
 	}
-	
+
+	@RequestMapping("save-provider.do")
+	public ModelAndView saveProvider(Provider provider, HttpServletResponse response) {
+		provider = providerDAO.save(provider);
+		ModelAndView modelAndView = new ModelAndView("home");
+		response.addCookie(new Cookie("providerId", provider.getId().toString()));
+		return modelAndView;
+	}
+
 	@RequestMapping("show-provider.do")
 	public ModelAndView showProvider() {
 		ModelAndView modelAndView = new ModelAndView("add-provider");
 		return modelAndView;
 	}
-	
+
 	@RequestMapping("show-client.do")
 	public ModelAndView showClient() {
 		ModelAndView modelAndView = new ModelAndView("add-client");
 		return modelAndView;
 	}
-	
+
 	@RequestMapping("save-client.do")
-	public ModelAndView saveClient(Long providerId, Client client) {
-		clientDAO.save(providerId, client);
+	public ModelAndView saveClient(@CookieValue("providerId") String providerId, Client client) {
+		clientDAO.save(Long.valueOf(providerId), client);
 		ModelAndView modelAndView = new ModelAndView("home");
 		return modelAndView;
 	}
-	
+
 	@RequestMapping("show-receipt.do")
-	public ModelAndView showReceipt(Long providerId) {
-		Clients clients = clientDAO.selectAll(providerId);
+	public ModelAndView showReceipt(@CookieValue("providerId") String providerId) {
+		Clients clients = clientDAO.selectAll(Long.valueOf(providerId));
 		ModelAndView modelAndView = new ModelAndView("add-receipt");
 		modelAndView.addObject("clients", clients);
 		return modelAndView;
 	}
-	
+
 	@RequestMapping("save-receipt.do")
-	public ModelAndView saveReceipt(Long providerId, Long clientId, Receipt receipt) {
-		receiptDAO.save(providerId, clientId, receipt);
+	public ModelAndView saveReceipt(@CookieValue("providerId") String providerId, Long clientId,
+			Receipt receipt) {
+		receiptDAO.save(Long.valueOf(providerId), clientId, receipt);
 		ModelAndView modelAndView = new ModelAndView("home");
 		return modelAndView;
 	}
