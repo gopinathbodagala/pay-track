@@ -50,9 +50,9 @@
 				<h2>Email Id</h2>
 				<input type="text" name="email" />
 				<h2>Mobile Number</h2>
-				<input type="text" name="mobileNumber" />
+				<input type="text" name="mobile" />
 				<h2>Address</h2>
-				<textarea></textarea>
+				<textarea name="address"></textarea>
 				<input type="submit" value="Save" />
 
 </form>
