@@ -36,8 +36,7 @@ CREATE TABLE `clients` (
   `mobile_number` varchar(20) NOT NULL,
   `address` varchar(300) NOT NULL,
   PRIMARY KEY  (`id`),
-  UNIQUE KEY `uk_clients_email_id` (`email_id`),
-  UNIQUE KEY `uk_clients_mobile_number` (`mobile_number`)
+  UNIQUE KEY `uk_clients_email_id` (`email_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -66,8 +65,7 @@ CREATE TABLE `providers` (
   `address` varchar(300) NOT NULL,
   `service_name` varchar(200) NOT NULL,
   PRIMARY KEY  (`id`),
-  UNIQUE KEY `uk_email_id` (`email_id`),
-  UNIQUE KEY `uk_mobile` (`mobile_number`)
+  UNIQUE KEY `uk_email_id` (`email_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -146,4 +144,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2012-12-06 19:44:57
+-- Dump completed on 2012-12-06 19:47:50

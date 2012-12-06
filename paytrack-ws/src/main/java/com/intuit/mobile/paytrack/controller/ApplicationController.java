@@ -91,7 +91,13 @@ public class ApplicationController {
 	@RequestMapping("save-provider.do")
 	public ModelAndView saveProvider(Provider provider,
 			HttpServletResponse response) {
-		provider = providerDAO.save(provider);
+		Providers providers = providerDAO.selectByEmail(provider.getEmail());
+		List<Provider> providerList = providers.getProviders();
+		if(providerList.isEmpty()){
+			provider = providerDAO.save(provider);
+		}else{
+			provider = providerList.get(0);
+		}
 		ModelAndView modelAndView = new ModelAndView("home");
 		response.addCookie(new Cookie("providerId", provider.getId().toString()));
 		return modelAndView;
