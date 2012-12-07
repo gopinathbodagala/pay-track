@@ -1102,3 +1102,8 @@ form.login h3 {
   margin-left: -50px;
   opacity: 1;
   -webkit-transition: opacity 0.5s; }
+  
+
+.ui-page-header-fixed{
+padding-top:0px !important;
+}
